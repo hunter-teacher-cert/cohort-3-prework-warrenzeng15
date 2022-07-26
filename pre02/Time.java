@@ -6,18 +6,20 @@ public class Time {
     int hour = 17;
     int minute = 50;
     int second = 10;
-    double secsmid = (hour * 60 * 60) + (minute * 60) + second;
-    double secinday = 24 * 60 * 60;
-    double secleft = secinday - secsmid;
-    double percentofday = (secsmid / secinday) * 100.0;
+    int secsmid = (hour * 60 * 60) + (minute * 60) + second;
+    int secinday = 24 * 60 * 60;
+    int secleft = secinday - secsmid;
+    double percentofday = (double) secsmid / secinday;
+    System.out.println("percent of day is:" + percentofday);
     System.out.println("The number of seconds since midnight is: " + secsmid);
     System.out.println("The number of seconds remaining in the day is: " + secleft);
-    System.out.println("The percentage of the day that has passed is: " + secsmid / secinday * 100);
+    System.out.printf("The percentage of the day that has passed is: %.3f\n", percentofday * 100);
     hour = 18;
     minute = 31;
     second = 12;
     double elapsedsecsmid = (hour * 60 * 60) + (minute * 60) + second;
     double elapsedtime = elapsedsecsmid - secsmid;
-    System.out.println("The elapsed time since I began this excercise is: " + elapsedtime/60 + " minutes.");
+    elapsedtime = elapsedtime / 60;
+    System.out.printf("The elapsed time since I began this excercise is: %.2f minutes\n", elapsedtime);
   }
 }
