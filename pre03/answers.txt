@@ -1,0 +1,30 @@
+1.
+When ping is invoked, it prints a period and then starts a newline. When baffle is invoked, it prints out "wug" and then invokes ping, meaning together baffle would print "wug." (and then a new line).
+
+Zoop being invoked would invoke baffle and then print out "You wugga" on the new line created from ping.
+
+Following the program at the start (at main), we see that it prints the string "No, I ", and then invokes zoop (baffle followed by 'You wugga', and then another baffle). In total this prints "No, I wug." on the first line followed by "You wugga wug." on the second line. 
+The third and final line starts with "I " and a single baffle (wug.) 
+
+Putting it all together, the program reads:
+
+No, I wug.
+You wugga wug.
+I wug.
+
+
+2.
+
+main ["No I "]     
+
+zoop [ baffle [ "wug" + [ ping ["."\n] ] ] ]
+
+baffle ["wug" + ping ["."\n]  ]
+
+ping ["."\n]
+
+//I'm not clear on exactly what is supposed to be included in each frame of a stack diagram, so i bundled baffle and ping into zoop, as they are both invoked when zoop is. Of course, that means i put ping inside baffle's frame as well.
+
+
+3.
+Invoking baffle at the end of ping would cause an infinite loop. baffle would print "wug", and then invoke ping, turning the line to "wug." and creating a new line. But since we are invoking baffle at the end of ping, it will restart the process again and print out "wug." on another line, and then another line, and another line, and so forth.
