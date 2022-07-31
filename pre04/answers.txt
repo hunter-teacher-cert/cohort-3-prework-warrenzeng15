@@ -6,4 +6,25 @@
 2.
     1)
       main[     ]
-      
+      zoop [ "just for",   5  ]
+      ping [  "any not more" ] 
+      clink [  10  ]
+      zoop [ "breakfast", 10]
+
+
+    2)output:
+    just for
+    any not more
+    It's breakfast
+    !
+
+ Zoop is the first method to be invoked, using the string "just for" and the integer 5. since the variable "bob" is == 5, we go to ping("not"), which subsequently printlns "any"+ "not" + "more". Next under main is clink(2*5), so clink(10). This print's out "It's", and then we go back to zoop as zoop("breakfast",10). However unlike last time, the condition is not filled and we go to the else statement -- which simply prints "!" on the new line.
+
+
+3.
+  main [   ]
+  nLines [ n [4] ]
+  nLines [ n [3] ]
+  nLines [ n [2] ]
+  nLines [ n [1] ]
+  
