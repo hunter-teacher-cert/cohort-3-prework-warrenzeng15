@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
+
 public class Array {
 
   public static void powArray(double[] values, double b) {
@@ -9,19 +10,18 @@ public class Array {
     }
   }
 
-  	public static int[] scoresArray(int size){
+	public static int[] randomArray(int size){
 		Random random = new Random();
-		int[] a = new int[size];
-		for (int i = 0; i  < a.length; i++) {
-			a[i] = random.nextInt(size);
+		int[]a = new int[size];
+		for (int i=0; i <a.length; i++) {
+			a[i]=random.nextInt(100);
 		}
 			return a;
 		}
 
-
   
-  public static int[] histogram(int[] scores, int counter) {
-    int[] counts = new int[counter];
+  public static int[] histogram(int[] scores, int counters) {
+    int[] counts = new int[counters];
     for (int score : scores) {
       counts[score]++;
     }
@@ -39,9 +39,10 @@ public class Array {
     values[3] = 5.0;
 
     powArray(values, 2.0);
-    System.out.println();
     System.out.println(Arrays.toString(values));
-
-
+    System.out.println();
+    //create an array with 100 test scores, randomized from 1-99
+    int[] testScores = randomArray(100);
+    System.out.println(Arrays.toString(histogram(testScores,100)));
   }
 }

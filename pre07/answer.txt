@@ -1,0 +1,15 @@
+1)
+Banana is a method that takes an array and multiplies every element of the array with each other (product of all the elements in the array). 
+  "kiwi" is what is used to reduce the process into a single value. i is the index.
+
+
+2)
+The method grapefruit takes an array and an integer, and finds the first appearance of that integer value in the array (i.e, finds the index of the integer). 
+  "grape" is the integer being searched for, and again i is the index.
+
+
+3)
+The method pineapple searches through the array and makes a count of how many times a certain integer appears in the list.
+"apple" is the integer that is being searched for.
+"pine" stands for each value in the array being "looked at" at any given moment. (like the example from 8.10, it's like "for each value in values").
+"pear" is the counter for the number of times the integer is found in the list.
