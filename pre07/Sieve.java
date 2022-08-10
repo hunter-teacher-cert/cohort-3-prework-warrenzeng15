@@ -8,7 +8,7 @@ public class Sieve {
     isPrime[0] = false;
     isPrime[1] = false;
 
-    for (int i = 2; i < n; i++) {
+    for (int i = 2; i < isPrime.length; i++) {
       isPrime[i] = true;
     }
 
@@ -16,7 +16,7 @@ public class Sieve {
     for (int i = 2; i < Math.sqrt(n); i++) {
 
       // if element in array is true
-      if (isPrime[i] = true) {
+      if (isPrime[i] == true) {
 
         // change multiples of the element to false
         for (int j = (i * i); j < n; j = j + i) {
@@ -33,6 +33,5 @@ public class Sieve {
     System.out.println(Arrays.toString(sieve(30)));
 
   }
-  //i have a bug where the index for the number 4 appears as true when it should be false
-  //the boolean values for everything else seems to be correct
+
 }
